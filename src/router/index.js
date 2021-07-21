@@ -7,6 +7,7 @@ import Signup from '../views/Signup.vue'
 import Login from '../views/Login.vue'
 import Logout from '../views/Logout.vue'
 import PostsIndex from '../views/PostsIndex.vue'
+import PostNew from '../views/PostNew.vue'
 
 Vue.use(VueRouter)
 
@@ -48,6 +49,11 @@ const routes = [
     path: '/postsindex',
     name: 'Posts Index',
     component: PostsIndex
+  },
+  {
+    path: '/postnew',
+    name: 'New Post',
+    component: PostNew
   }
 ]
 
