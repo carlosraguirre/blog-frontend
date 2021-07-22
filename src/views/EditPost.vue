@@ -19,6 +19,12 @@
       </div>
       <input type="submit" value="Submit" />
     </form>
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <button v-on:click="deletePost()">Delete</button>
   </div>
 </template>
 
@@ -49,6 +55,13 @@ export default {
         console.log(response.data);
         this.editPostParams = response.data;
       })
+    },
+    deletePost: function() {
+      console.log("deleting post");
+      axios.delete(`/posts/${this.$route.params.id}`).then(response => {
+        console.log(response.data);
+        this.$router.push("/recipes");
+      });
     }
   },
   created: function() {
