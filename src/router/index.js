@@ -2,12 +2,12 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import About from '../views/About.vue'
-import Sample from '../views/Sample.vue'
 import Signup from '../views/Signup.vue'
 import Login from '../views/Login.vue'
 import Logout from '../views/Logout.vue'
 import PostsIndex from '../views/PostsIndex.vue'
 import PostNew from '../views/PostNew.vue'
+import ShowPost from '../views/ShowPost.vue'
 
 Vue.use(VueRouter)
 
@@ -26,11 +26,6 @@ const routes = [
     component: About
   },
   {
-    path: '/sample',
-    name: 'Sample',
-    component: Sample
-  },
-  {
     path: '/signup',
     name: 'Signup',
     component: Signup
@@ -46,14 +41,19 @@ const routes = [
     component: Logout
   },
   {
-    path: '/postsindex',
+    path: '/posts',
     name: 'Posts Index',
     component: PostsIndex
   },
   {
-    path: '/postnew',
+    path: '/posts/new',
     name: 'New Post',
     component: PostNew
+  },
+  {
+    path: '/posts/:id',
+    name: 'Show Post',
+    component: ShowPost
   }
 ]
 

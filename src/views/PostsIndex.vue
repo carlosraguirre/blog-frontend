@@ -3,7 +3,11 @@
     <div v-for="post in posts">
       <p>{{ post.title }}</p>
       <p>{{ post.body }}</p>
-      <p><img v-bind:src="post.image"></p>
+      <p>
+        <router-link v-bind:to="`/posts/${post.id}`">
+          <img v-bind:src="post.image">
+        </router-link>
+      </p>
       <hr>
       </div>
   </div>
