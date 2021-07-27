@@ -15,7 +15,8 @@
       </div>
       <div>
         <label>Password:</label>
-        <input type="password" v-model="newUserParams.password" />
+        <input type="password" v-model="newUserParams.password" maxlength="10"/>
+        <!-- <small v-if="newUserParams.password.length > 20">Password is too long</small> -->
       </div>
       <div>
         <label>Password confirmation:</label>
