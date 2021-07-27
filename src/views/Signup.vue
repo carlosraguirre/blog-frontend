@@ -21,6 +21,7 @@
       <div>
         <label>Password confirmation:</label>
         <input type="password" v-model="newUserParams.password_confirmation" />
+        <small v-if="newUserParams.password !== newUserParams.password_confirmation"> Passwords do not match!</small>
       </div>
       <input type="submit" value="Submit" />
     </form>
@@ -33,7 +34,9 @@
   export default {
     data: function () {
       return {
-        newUserParams: {},
+        newUserParams: {
+          password_confirmation: ""
+        },
         errors: [],
       };
     },
