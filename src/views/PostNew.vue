@@ -12,6 +12,7 @@
       <div>
         <label>Body:</label>
         <input type="text" v-model="newPost.body" />
+        <small> {{ 200 - newPost.body.length }} characters remaining</small>
       </div>
       <div>
         <label>Image:</label>
@@ -27,7 +28,9 @@
   export default {
     data: function () {
       return {
-        newPost: {},
+        newPost: {
+          body: ""
+        },
         errors: [],
       };
     },
